@@ -36,24 +36,24 @@
       this.pnlBody = new System.Windows.Forms.Panel();
       this.pnlIntervalAndPosition = new System.Windows.Forms.Panel();
       this.panel2 = new System.Windows.Forms.Panel();
+      this.lblPositionRight = new System.Windows.Forms.Label();
+      this.numPosY = new System.Windows.Forms.NumericUpDown();
+      this.lblPositionCenter = new System.Windows.Forms.Label();
+      this.numPosX = new System.Windows.Forms.NumericUpDown();
+      this.lblPosition = new System.Windows.Forms.Label();
       this.pnlInterval = new System.Windows.Forms.Panel();
       this.lblIntervalSecond = new System.Windows.Forms.Label();
       this.numInterval = new System.Windows.Forms.NumericUpDown();
       this.lblInterval = new System.Windows.Forms.Label();
       this.chkEnabled = new System.Windows.Forms.CheckBox();
-      this.lblPosition = new System.Windows.Forms.Label();
-      this.numPosX = new System.Windows.Forms.NumericUpDown();
-      this.lblPositionCenter = new System.Windows.Forms.Label();
-      this.numPosY = new System.Windows.Forms.NumericUpDown();
-      this.lblPositionRight = new System.Windows.Forms.Label();
       this.status.SuspendLayout();
       this.pnlBody.SuspendLayout();
       this.pnlIntervalAndPosition.SuspendLayout();
       this.panel2.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.numPosY)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.numPosX)).BeginInit();
       this.pnlInterval.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.numInterval)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.numPosX)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.numPosY)).BeginInit();
       this.SuspendLayout();
       // 
       // timer
@@ -77,7 +77,7 @@
       // statusLabel
       // 
       this.statusLabel.Name = "statusLabel";
-      this.statusLabel.Size = new System.Drawing.Size(199, 22);
+      this.statusLabel.Size = new System.Drawing.Size(149, 22);
       this.statusLabel.Spring = true;
       // 
       // statusTime
@@ -125,6 +125,74 @@
       this.panel2.Padding = new System.Windows.Forms.Padding(5);
       this.panel2.Size = new System.Drawing.Size(214, 30);
       this.panel2.TabIndex = 1;
+      // 
+      // lblPositionRight
+      // 
+      this.lblPositionRight.AutoSize = true;
+      this.lblPositionRight.Dock = System.Windows.Forms.DockStyle.Left;
+      this.lblPositionRight.Location = new System.Drawing.Point(190, 5);
+      this.lblPositionRight.Name = "lblPositionRight";
+      this.lblPositionRight.Size = new System.Drawing.Size(9, 12);
+      this.lblPositionRight.TabIndex = 5;
+      this.lblPositionRight.Text = ")";
+      // 
+      // numPosY
+      // 
+      this.numPosY.Dock = System.Windows.Forms.DockStyle.Left;
+      this.numPosY.Location = new System.Drawing.Point(133, 5);
+      this.numPosY.Maximum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+      this.numPosY.Minimum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            -2147483648});
+      this.numPosY.Name = "numPosY";
+      this.numPosY.Size = new System.Drawing.Size(57, 19);
+      this.numPosY.TabIndex = 4;
+      this.numPosY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+      // 
+      // lblPositionCenter
+      // 
+      this.lblPositionCenter.AutoSize = true;
+      this.lblPositionCenter.Dock = System.Windows.Forms.DockStyle.Left;
+      this.lblPositionCenter.Location = new System.Drawing.Point(122, 5);
+      this.lblPositionCenter.Name = "lblPositionCenter";
+      this.lblPositionCenter.Size = new System.Drawing.Size(11, 12);
+      this.lblPositionCenter.TabIndex = 3;
+      this.lblPositionCenter.Text = ", ";
+      // 
+      // numPosX
+      // 
+      this.numPosX.Dock = System.Windows.Forms.DockStyle.Left;
+      this.numPosX.Location = new System.Drawing.Point(65, 5);
+      this.numPosX.Maximum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+      this.numPosX.Minimum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            -2147483648});
+      this.numPosX.Name = "numPosX";
+      this.numPosX.Size = new System.Drawing.Size(57, 19);
+      this.numPosX.TabIndex = 2;
+      this.numPosX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+      // 
+      // lblPosition
+      // 
+      this.lblPosition.AutoSize = true;
+      this.lblPosition.Dock = System.Windows.Forms.DockStyle.Left;
+      this.lblPosition.Location = new System.Drawing.Point(5, 5);
+      this.lblPosition.Name = "lblPosition";
+      this.lblPosition.Size = new System.Drawing.Size(60, 12);
+      this.lblPosition.TabIndex = 1;
+      this.lblPosition.Text = "Position : (";
       // 
       // pnlInterval
       // 
@@ -194,74 +262,6 @@
       this.chkEnabled.Text = "Enabled";
       this.chkEnabled.UseVisualStyleBackColor = true;
       // 
-      // lblPosition
-      // 
-      this.lblPosition.AutoSize = true;
-      this.lblPosition.Dock = System.Windows.Forms.DockStyle.Left;
-      this.lblPosition.Location = new System.Drawing.Point(5, 5);
-      this.lblPosition.Name = "lblPosition";
-      this.lblPosition.Size = new System.Drawing.Size(60, 12);
-      this.lblPosition.TabIndex = 1;
-      this.lblPosition.Text = "Position : (";
-      // 
-      // numPosX
-      // 
-      this.numPosX.Dock = System.Windows.Forms.DockStyle.Left;
-      this.numPosX.Location = new System.Drawing.Point(65, 5);
-      this.numPosX.Maximum = new decimal(new int[] {
-            1920,
-            0,
-            0,
-            0});
-      this.numPosX.Minimum = new decimal(new int[] {
-            1920,
-            0,
-            0,
-            -2147483648});
-      this.numPosX.Name = "numPosX";
-      this.numPosX.Size = new System.Drawing.Size(57, 19);
-      this.numPosX.TabIndex = 2;
-      this.numPosX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-      // 
-      // lblPositionCenter
-      // 
-      this.lblPositionCenter.AutoSize = true;
-      this.lblPositionCenter.Dock = System.Windows.Forms.DockStyle.Left;
-      this.lblPositionCenter.Location = new System.Drawing.Point(122, 5);
-      this.lblPositionCenter.Name = "lblPositionCenter";
-      this.lblPositionCenter.Size = new System.Drawing.Size(11, 12);
-      this.lblPositionCenter.TabIndex = 3;
-      this.lblPositionCenter.Text = ", ";
-      // 
-      // numPosY
-      // 
-      this.numPosY.Dock = System.Windows.Forms.DockStyle.Left;
-      this.numPosY.Location = new System.Drawing.Point(133, 5);
-      this.numPosY.Maximum = new decimal(new int[] {
-            1920,
-            0,
-            0,
-            0});
-      this.numPosY.Minimum = new decimal(new int[] {
-            1920,
-            0,
-            0,
-            -2147483648});
-      this.numPosY.Name = "numPosY";
-      this.numPosY.Size = new System.Drawing.Size(57, 19);
-      this.numPosY.TabIndex = 4;
-      this.numPosY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-      // 
-      // lblPositionRight
-      // 
-      this.lblPositionRight.AutoSize = true;
-      this.lblPositionRight.Dock = System.Windows.Forms.DockStyle.Left;
-      this.lblPositionRight.Location = new System.Drawing.Point(190, 5);
-      this.lblPositionRight.Name = "lblPositionRight";
-      this.lblPositionRight.Size = new System.Drawing.Size(9, 12);
-      this.lblPositionRight.TabIndex = 5;
-      this.lblPositionRight.Text = ")";
-      // 
       // frmMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -281,11 +281,11 @@
       this.pnlIntervalAndPosition.ResumeLayout(false);
       this.panel2.ResumeLayout(false);
       this.panel2.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.numPosY)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.numPosX)).EndInit();
       this.pnlInterval.ResumeLayout(false);
       this.pnlInterval.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.numInterval)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.numPosX)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.numPosY)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
