@@ -79,6 +79,7 @@
       this.statusLabel.Name = "statusLabel";
       this.statusLabel.Size = new System.Drawing.Size(149, 22);
       this.statusLabel.Spring = true;
+      this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // statusTime
       // 
@@ -261,6 +262,7 @@
       this.chkEnabled.TabIndex = 0;
       this.chkEnabled.Text = "Enabled";
       this.chkEnabled.UseVisualStyleBackColor = true;
+      this.chkEnabled.CheckedChanged += new System.EventHandler(this.chkEnabled_CheckedChanged);
       // 
       // frmMain
       // 

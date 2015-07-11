@@ -15,7 +15,7 @@ namespace AutoClicker
     private Clicker clicker;
     private DateTime dt;
     private String prevTime = "";
-
+    private int intervalCount = 0;
 
     const String PROGRAM_NAME = "AutoClicker";
 
@@ -53,12 +53,34 @@ namespace AutoClicker
         prevTime = currentTime;
         statusTime.Text = currentTime;
 
+        int numIntervalInt = (int)numInterval.Value;
+
         if (chkEnabled.CheckState == CheckState.Checked)
         {
-          int x = (int)numPosX.Value;
-          int y = (int)numPosY.Value;
-          clicker.sendClick(x, y);
+          if (intervalCount == 0)
+          {
+            int x = (int)numPosX.Value;
+            int y = (int)numPosY.Value;
+            clicker.sendClick(x, y);
+          }
+          ++intervalCount;
+          statusLabel.Text = "Next click : " + (numIntervalInt - intervalCount+1);
+
+          if (intervalCount >= (int)numInterval.Value)
+          {
+            intervalCount = 0;
+          }
+
         }
+      }
+    }
+
+    private void chkEnabled_CheckedChanged(object sender, EventArgs e)
+    {
+      if (chkEnabled.CheckState==CheckState.Unchecked)
+      {
+        statusLabel.Text = "";
+        intervalCount = 0;
       }
     }
   }
